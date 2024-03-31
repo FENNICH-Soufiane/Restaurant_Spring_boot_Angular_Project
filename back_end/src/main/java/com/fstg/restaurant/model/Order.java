@@ -1,9 +1,9 @@
 package com.fstg.restaurant.model;
 
-public class Order {
+public class Order extends CategoryOrder {
 
 	
-	private Long id;
+	
 	private String nameOrder;
 	private int price;
 	private String img;
