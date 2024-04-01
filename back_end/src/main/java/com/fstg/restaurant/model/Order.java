@@ -30,7 +30,7 @@ public class Order extends CategoryOrder {
 	private String description;
 	
 	@ManyToOne
-	@JoinColumn(name = "id-category")
+	@JoinColumn(name = "id_category")
 	private Category category;
 	
 }
