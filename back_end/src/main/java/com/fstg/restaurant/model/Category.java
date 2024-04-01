@@ -1,6 +1,9 @@
 package com.fstg.restaurant.model;
 
+import java.util.Set;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -11,6 +14,7 @@ import lombok.Data;
 @Table(name = "category")
 public class Category extends CategoryOrder  {
 	
-		
+	@OneToMany(mappedBy = "category")
+	private Set<Order> orders;
 
 }

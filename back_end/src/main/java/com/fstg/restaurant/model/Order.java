@@ -2,6 +2,8 @@ package com.fstg.restaurant.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "orderfood")
+@Table(name = "orders")
 public class Order extends CategoryOrder {
 
 	
@@ -22,5 +24,9 @@ public class Order extends CategoryOrder {
 	private String img;
 	@Column(name = "description")
 	private String description;
+	
+	@ManyToOne
+	@JoinColumn(name = "id-category")
+	private Category category;
 	
 }
