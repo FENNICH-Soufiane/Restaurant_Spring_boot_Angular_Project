@@ -19,7 +19,10 @@ public class DataRestApiConfig implements RepositoryRestConfigurer {
 		
 		HttpMethod[] preventMethod = {HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE};
 		
-		config.getExposureConfiguration()
+		disableHttpMethod(Category.class, config, preventMethod);
+		disableHttpMethod(Order.class, config, preventMethod);
+		
+		/*config.getExposureConfiguration()
 			.forDomainType(Category.class)
 			.withItemExposure((metadata, httpMethods) -> httpMethods.disable(preventMethod))
 			.withCollectionExposure((metada, httpMethods) -> httpMethods.disable(preventMethod));
@@ -27,8 +30,14 @@ public class DataRestApiConfig implements RepositoryRestConfigurer {
 		config.getExposureConfiguration()
 			.forDomainType(Order.class)
 			.withItemExposure((metadata, httpMethods) -> httpMethods.disable(preventMethod))
-			.withCollectionExposure((metada, httpMethods) -> httpMethods.disable(preventMethod));
+			.withCollectionExposure((metada, httpMethods) -> httpMethods.disable(preventMethod));*/
 	}
 	
+	private void disableHttpMethod(Class theClass, RepositoryRestConfiguration config, HttpMethod[] unsupprtedMethod) {
+		config.getExposureConfiguration()
+		.forDomainType(theClass)
+		.withItemExposure((metadata, httpMethods) -> httpMethods.disable(unsupprtedMethod))
+		.withCollectionExposure((metada, httpMethods) -> httpMethods.disable(unsupprtedMethod));
+	}
 	
 }
