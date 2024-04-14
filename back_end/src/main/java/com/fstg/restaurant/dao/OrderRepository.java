@@ -8,4 +8,5 @@ import com.fstg.restaurant.model.Order;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
+	
 }
