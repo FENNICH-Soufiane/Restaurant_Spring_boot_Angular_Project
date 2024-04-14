@@ -1,5 +1,7 @@
 package com.fstg.restaurant.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -29,6 +31,7 @@ public class Order extends CategoryOrder {
 	@Lob
 	private String description;
 	
+	@JsonIgnore//pour ignorer ce champ lors du reponse pour eviter une boucle infinie de ce champ
 	@ManyToOne
 	@JoinColumn(name = "id_category")
 	private Category category;
