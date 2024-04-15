@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { OrderItemsComponent } from "./components/order-items/order-items.component";
 
+
 @Component({
     selector: 'app-root',
     standalone: true,
