@@ -24,7 +24,7 @@
 .myorder {
   margin-top: 20px;
   background-color: beige;
-  padding: 29px;
+  padding: 10px;
 }
 .order-item {
   height: 710px;
@@ -35,4 +35,7 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+}
+.img {
+  height: 220px;
 }

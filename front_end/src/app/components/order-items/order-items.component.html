@@ -1,18 +1,21 @@
 <p>order-items works!</p>
 <div class="row">
-  <div *ngFor="let temp of orders" class="col-md-4 myorder">
-    <div class="card order-item">
-      <img
-        src="assets/img/{{temp.img}}.jpg"
-        alt="Denim Jeans"
-        style="width: 100%"
-      />
-      <h1>{{ temp.name }}</h1>
-      <p class="price">{{ temp.price | currency : "USD" }}</p>
-      <p class="dis">
-        {{ temp.description }}
-      </p>
-      <button class="btn btn-primary mybtn">Add to Cart</button>
+  <div *ngFor="let temp of orders" class="col-md-4">
+    <div class="myorder">
+      <div class="card order-item">
+        <img
+          src="assets/img/{{ temp.img }}.jpg"
+          alt="Denim Jeans"
+          style="width: 100%"
+          class="img"
+        />
+        <h1>{{ temp.name }}</h1>
+        <p class="price">{{ temp.price | currency : "USD" }}</p>
+        <p class="dis">
+          {{ temp.description }}
+        </p>
+        <button class="btn btn-primary mybtn">Add to Cart</button>
+      </div>
     </div>
   </div>
 </div>
