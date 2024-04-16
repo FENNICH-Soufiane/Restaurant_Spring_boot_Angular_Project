@@ -4,7 +4,7 @@ export class Order {
   data_update: Date;
   name: string;
   description: string;
-  image: string;
+  img: string;
   price: number;
   // id_category
   constructor(
@@ -13,7 +13,7 @@ export class Order {
     data_update_: Date,
     name_: string,
     description_: string,
-    image_: string,
+    image: string,
     price_: number
   ) {
     this.id = id_;
@@ -21,7 +21,7 @@ export class Order {
     this.data_update = data_update_;
     this.name = name_;
     this.description = description_;
-    this.image = image_;
+    this.img = image;
     this.price = price_;
   }
 }
