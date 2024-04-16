@@ -1098,7 +1098,7 @@ body {
   }
   .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
-    margin-left: 27px;
+    margin-left: 100px;
     font-weight: bold;
   }
   /* my style */
@@ -1133,7 +1133,7 @@ body {
     margin-top: 4px;
   }
   .btn:not(:disabled):not(.disabled) {
-    margin: 4px 0px 2px 16px !important;
+    margin: 4px 0px 2px 0px !important;
   }
   .statusCard
   {
